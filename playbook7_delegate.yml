@@ -1,0 +1,29 @@
+---
+- name: My Playbook
+  hosts: all
+  become: yes
+  
+  vars: 
+    mytext: "Privet mir!"
+  
+  tasks:
+  - name: Ping test
+    ping:
+   
+  - name: Create file1
+    copy:
+      dest: /home/file1.txt
+      content: |
+          This is text 
+          proverb 
+          xz che {{ mytext }}
+    delegate_to: Linux1
+
+  - name: Create file2
+    copy:
+      dest: /home/file2.txt
+      content: |
+          This is text
+          proverb
+          xz che {{ mytext }}
+    
