@@ -1,0 +1,7 @@
+[staging_servers]
+Linux1 ansible_host=192.168.0.213  ansible_user=gleb  ansible_password=15doramu15
+
+[prod_servers]
+Linux1 ansible_host=192.168.0.213  ansible_user=gleb  ansible_password=15doramu15 owner=Gleb
+Linux2 ansible_host=192.168.0.215  ansible_user=gleb  ansible_password=15doramu15 owner=gleb
+
